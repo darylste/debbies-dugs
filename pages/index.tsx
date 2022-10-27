@@ -1,10 +1,9 @@
-import Test from '../atomic/atoms/Test/Test.component';
+import Nav from '../atomic/atoms/Nav/Nav.component';
 
 export default function Home() {
   return (
     <div>
-      <h1>Debbies Dugs!</h1>
-      <Test></Test>
+      <Nav></Nav>
     </div>
   );
 }
