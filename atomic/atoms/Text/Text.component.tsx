@@ -1,6 +1,11 @@
 import styles from './Text.module.scss';
 
-type Varient = 'heroTitle' | 'body' | 'servicesTitle' | 'servicesPrice';
+type Varient =
+  | 'heroTitle'
+  | 'body'
+  | 'servicesTitle'
+  | 'servicesPrice'
+  | 'sectionTitle';
 
 interface ITextProps {
   children: React.ReactNode;
@@ -16,6 +21,8 @@ const Text: React.FC<ITextProps> = ({ children, varient }) => {
       return <h3 className={styles.servicesTitle}>{children}</h3>;
     case 'servicesPrice':
       return <span className={styles.servicesPrice}>{children}</span>;
+    case 'sectionTitle':
+      return <h2 className={styles.sectionTitle}>{children}</h2>;
   }
 };
 

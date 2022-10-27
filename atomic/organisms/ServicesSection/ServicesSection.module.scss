@@ -1,0 +1,11 @@
+@import '../../../styles/variables.scss';
+
+.section {
+  margin: 0 $spacing-lg;
+}
+
+.card__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $spacing-md;
+}

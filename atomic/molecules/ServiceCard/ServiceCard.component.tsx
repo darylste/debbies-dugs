@@ -5,25 +5,37 @@ import styles from './ServiceCard.module.scss';
 
 import pawImage from '../../../public/assets/icons/paw.svg';
 
-const ServiceCard = () => {
+type rate = 'day' | 'week' | 'night';
+export interface ICardProps {
+  title: string;
+  body: string;
+  list: string[];
+  price: number;
+  rate: rate;
+}
+
+const ServiceCard: React.FC<ICardProps> = ({
+  title,
+  body,
+  list,
+  price,
+  rate,
+}) => {
   return (
     <div className={styles.card}>
-      <Text varient='servicesTitle'>Dog Walking</Text>
+      <Text varient='servicesTitle'>{title}</Text>
       <Spacer top='xs' bottom='xs'>
-        <Text varient='body'>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea,
-          molestiae, consequuntur.
-        </Text>
+        <Text varient='body'>{body}</Text>
       </Spacer>
       <Spacer bottom='xs'>
         <ul className={styles.card__list}>
-          <li className={styles.card__list__item}>Item 1</li>
-          <li className={styles.card__list__item}>Item 2</li>
-          <li className={styles.card__list__item}>Item 3</li>
+          {list.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
         </ul>
       </Spacer>
       <p className={styles.card__price}>
-        <Text varient='servicesPrice'>£20</Text> per hour
+        <Text varient='servicesPrice'>£{price}</Text> per {rate}
       </p>
       <Image
         className={styles.card__background__image}
