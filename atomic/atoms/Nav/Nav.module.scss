@@ -1,0 +1,34 @@
+@import '../../../styles/components.scss';
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: $spacing-md $spacing-lg;
+
+  &__list {
+    display: flex;
+    font-size: $font-size-xs;
+    &__item {
+      list-style-type: none;
+      cursor: pointer;
+
+      &:not(:last-of-type) {
+        padding-right: $spacing-md;
+      }
+
+      &:hover {
+        color: $color-primary;
+        text-decoration: underline;
+      }
+
+      &:active {
+        filter: brightness(0.8);
+      }
+    }
+  }
+}
+
+.logo {
+  cursor: pointer;
+}
