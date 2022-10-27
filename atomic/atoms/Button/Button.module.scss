@@ -3,8 +3,8 @@
 .btn {
   border: none;
   width: fit-content;
-  padding: 1.5rem 4rem;
-  border-radius: 1rem;
+  padding: 1.5rem 3rem;
+  border-radius: $border-radius-md;
   font-size: $font-size-xs;
   border: 3px solid $color-primary;
   font-weight: $font-weight-semi-bold;
@@ -17,5 +17,4 @@
 .outline {
   box-sizing: border-box;
   background-color: unset;
-  border: 3px solid $color-primary;
 }
