@@ -1,9 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@600;700&family=Nunito+Sans&display=swap');
+
+@import '../styles/components.scss';
+
 *,
 *::before,
 *::after {
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
+}
+
+html {
+	font-family: $font-body;
+	font-size: 62.5%;
 }
 
 a {
