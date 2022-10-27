@@ -1,18 +1,16 @@
-import React from 'react';
 import Image from 'next/image';
 
 import styles from './Nav.module.scss';
 import logo from '../../../public/assets/logo.png';
 
-const Nav = () => {
+const Nav: React.FC = () => {
   return (
     <nav className={styles.nav}>
       <Image
         className={styles.logo}
         src={logo}
         alt='Debbies Dugs Logo'
-        width={100}
-        height={100}
+        width={75}
       />
       <ul className={styles.nav__list}>
         <li className={styles.nav__list__item}>Home</li>

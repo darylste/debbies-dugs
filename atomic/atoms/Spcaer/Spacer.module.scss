@@ -1,0 +1,75 @@
+@import '../../../styles/variables.scss';
+.spacer {
+  display: inline-block;
+}
+.top {
+  &-xs {
+    margin-top: $spacing-xs;
+  }
+  &-sm {
+    margin-top: $spacing-sm;
+  }
+  &-md {
+    margin-top: $spacing-md;
+  }
+  &-lg {
+    margin-top: $spacing-lg;
+  }
+  &-xl {
+    margin-top: $spacing-xl;
+  }
+}
+
+.right {
+  &-xs {
+    margin-right: $spacing-xs;
+  }
+  &-sm {
+    margin-right: $spacing-sm;
+  }
+  &-md {
+    margin-right: $spacing-md;
+  }
+  &-lg {
+    margin-right: $spacing-lg;
+  }
+  &-xl {
+    margin-right: $spacing-xl;
+  }
+}
+
+.bottom {
+  &-xs {
+    margin-bottom: $spacing-xs;
+  }
+  &-sm {
+    margin-bottom: $spacing-sm;
+  }
+  &-md {
+    margin-bottom: $spacing-md;
+  }
+  &-lg {
+    margin-bottom: $spacing-lg;
+  }
+  &-xl {
+    margin-bottom: $spacing-xl;
+  }
+}
+
+.left {
+  &-xs {
+    margin-left: $spacing-xs;
+  }
+  &-sm {
+    margin-left: $spacing-sm;
+  }
+  &-md {
+    margin-left: $spacing-md;
+  }
+  &-lg {
+    margin-left: $spacing-lg;
+  }
+  &-xl {
+    margin-left: $spacing-xl;
+  }
+}

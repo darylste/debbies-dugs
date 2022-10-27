@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@600;700&family=Nunito+Sans&display=swap');
 
-@import '../styles/components.scss';
+@import '../styles/variables.scss';
 
 *,
 *::before,
@@ -18,6 +18,7 @@ html {
 
 body {
   background-color: $color-background;
+  font-size: $font-size-sm;
 }
 
 a {
