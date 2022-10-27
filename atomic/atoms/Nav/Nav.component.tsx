@@ -10,7 +10,7 @@ const Nav: React.FC = () => {
         className={styles.logo}
         src={logo}
         alt='Debbies Dugs Logo'
-        width={75}
+        width={85}
       />
       <ul className={styles.nav__list}>
         <li className={styles.nav__list__item}>Home</li>
