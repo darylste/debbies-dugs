@@ -1,0 +1,13 @@
+@import '../../../styles/variables.scss';
+
+.hero {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: $spacing-md;
+  margin: $spacing-md $spacing-lg;
+
+  &__right {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
