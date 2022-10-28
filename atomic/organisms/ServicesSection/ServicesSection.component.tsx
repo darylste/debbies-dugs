@@ -29,7 +29,7 @@ const propsArr: ICardProps[] = [
   },
 ];
 
-const ServicesSection = () => {
+const ServicesSection: React.FC = () => {
   return (
     <section className={styles.section}>
       <Text varient='sectionTitle'>Our Services</Text>
