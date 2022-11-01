@@ -5,7 +5,8 @@ type Varient =
   | 'body'
   | 'servicesTitle'
   | 'servicesPrice'
-  | 'sectionTitle';
+  | 'sectionTitle'
+  | 'btnText';
 
 interface ITextProps {
   children: React.ReactNode;
@@ -23,6 +24,8 @@ const Text: React.FC<ITextProps> = ({ children, varient }) => {
       return <span className={styles.servicesPrice}>{children}</span>;
     case 'sectionTitle':
       return <h2 className={styles.sectionTitle}>{children}</h2>;
+    case 'btnText':
+      return <p className={styles.btnText}>{children}</p>;
   }
 };
 
