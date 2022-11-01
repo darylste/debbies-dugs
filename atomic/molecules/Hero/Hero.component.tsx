@@ -8,24 +8,28 @@ import styles from './Hero.module.scss';
 
 const Hero = () => {
   return (
-    <div className={styles.hero}>
-      <div className={styles.hero__left}>
-        <Text varient='heroTitle'>Dog Walking, Boarding and Day Care</Text>
-        <Spacer top='md' bottom='md'>
-          <Text varient='body'>
-            We know how special your doggo is, thats why we tail-or our
-            experience to meet your dogs needs.
-          </Text>
-        </Spacer>
-        <Spacer right='md'>
-          <Button varient='cta' text='Services' />
-        </Spacer>
-        <Button varient='outline' text='Get in Touch' />
+    <>
+      <div className={styles.hero}>
+        <div className={styles.hero__left}>
+          <Text varient='heroTitle'>Dog Walking, Boarding and Day Care</Text>
+          <Spacer top='md' bottom='md'>
+            <Text varient='body'>
+              We know how special your doggo is, thats why we tail-or our
+              experience to meet your dogs needs.
+            </Text>
+          </Spacer>
+          <div className={styles.btnGroup}>
+            <Spacer right='md'>
+              <Button varient='cta' text='Services' href='/' />
+            </Spacer>
+            <Button varient='outline' text='Get in Touch' href='/' />
+          </div>
+        </div>
+        <div className={styles.hero__right}>
+          <Image src={heroImage} alt='dog' width={500}></Image>
+        </div>
       </div>
-      <div className={styles.hero__right}>
-        <Image src={heroImage} alt='dog' width={500}></Image>
-      </div>
-    </div>
+    </>
   );
 };
 
