@@ -1,7 +1,8 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
-import styles from './Nav.module.scss';
 import logo from '../../../public/assets/logo.png';
+import styles from './Nav.module.scss';
 
 const Nav: React.FC = () => {
   return (
@@ -13,11 +14,21 @@ const Nav: React.FC = () => {
         width={85}
       />
       <ul className={styles.nav__list}>
-        <li className={styles.nav__list__item}>Home</li>
-        <li className={styles.nav__list__item}>Services</li>
-        <li className={styles.nav__list__item}>About</li>
-        <li className={styles.nav__list__item}>Gallery</li>
-        <li className={styles.nav__list__item}>Contact</li>
+        <Link href={'/'}>
+          <li className={styles.nav__list__item}>Home</li>
+        </Link>
+        <Link href={'/#services'}>
+          <li className={styles.nav__list__item}>Services</li>
+        </Link>
+        <Link href={'/#about'}>
+          <li className={styles.nav__list__item}>About</li>
+        </Link>
+        <Link href={'/#gallery'}>
+          <li className={styles.nav__list__item}>Gallery</li>
+        </Link>
+        <Link href={'/contact'}>
+          <li className={styles.nav__list__item}>Contact</li>
+        </Link>
       </ul>
     </nav>
   );

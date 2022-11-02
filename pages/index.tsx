@@ -4,17 +4,18 @@ import AboutSection from '../atomic/organisms/AboutSection/AboutSection.componen
 import GallerySection from '../atomic/organisms/GallerySection/GallerySection.component';
 import ReviewSection from '../atomic/organisms/ReviewSection/ReviewSection.component';
 import ServicesSection from '../atomic/organisms/ServicesSection/ServicesSection.component';
+import Footer from '../atomic/organisms/Footer/Footer.component';
 
-import { IServicesSectionProps } from '../utils/types';
+import { IServicesSectionProps, IFooterListProps } from '../utils/types';
 
 // hero data
 const heroProps = {
   title: 'Dog Walking, Boarding and Day Care',
   text: 'We know how special your doggo is, thats why we tail-or our experience to meet your dogs needs.',
   ctaBtnText: 'Services',
-  ctaBtnLink: '/',
+  ctaBtnLink: '/#services',
   outlineBtnText: 'Get in Touch',
-  outlineBtnLink: '/',
+  outlineBtnLink: '/contact',
   imgUrl: '/assets/illustrations/hero-image.svg',
   imgAlt: 'dog',
   imgWidth: 500,
@@ -61,7 +62,7 @@ const aboutSectionProps = {
     "I am fully insured and K9 first aid trained meaning you can rest easy sending your doggo for a day with Debbie's Dugs. Please reach out and we can explore what package suits you best.",
   ],
   btnText: 'Get in Touch',
-  btnUrl: '/',
+  btnUrl: '/contact',
   imgUrl: '/assets/debbie.png',
   imgAlt: 'debbie',
 };
@@ -123,6 +124,7 @@ export default function Home() {
       <AboutSection {...aboutSectionProps} />
       <ReviewSection {...reviewSectionProps} />
       <GallerySection imgArr={images} />
+      <Footer />
     </div>
   );
 }

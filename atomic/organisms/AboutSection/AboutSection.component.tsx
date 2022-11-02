@@ -27,7 +27,7 @@ const AboutSection: React.FC<IAboutSectionProps> = ({
   imgAlt,
 }) => {
   return (
-    <section className={styles.section}>
+    <section id='about' className={styles.section}>
       <Spacer left='lg' right='lg' top='lg' bottom='lg'>
         <Text varient='sectionTitle'>{title}</Text>
         <Spacer top='lg' />

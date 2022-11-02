@@ -24,8 +24,8 @@ const GallerySection: React.FC<IGallerySectionProps> = ({
   imgArr,
 }) => {
   return (
-    <section className={styles.section}>
-      <Spacer left='lg' right='lg' top='md' bottom='md'>
+    <section id='gallery' className={styles.section}>
+      <Spacer left='lg' right='lg' top='md' bottom='lg'>
         <Text varient='sectionTitle'>Gallery</Text>
         <Spacer top='lg' />
         <Masonry

@@ -23,3 +23,8 @@ export interface IReviewCardProps {
   text: string;
   rating: number;
 }
+
+export interface IFooterListProps {
+  title: string;
+  list: string[];
+}
