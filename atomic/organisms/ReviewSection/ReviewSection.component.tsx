@@ -1,20 +1,25 @@
 import Spacer from '../../atoms/Spcaer/Spacer.component';
 import Text from '../../atoms/Text/Text.component';
 import ReviewCard from '../../molecules/ReviewCard/ReviewCard.component';
+import { IReviewCardProps } from '../../../utils/types';
 
 import styles from './ReviewSection.module.scss';
 
-const ReviewSection: React.FC = () => {
+interface IReviewSectionProps {
+  title: string;
+  cards: IReviewCardProps[];
+}
+
+const ReviewSection: React.FC<IReviewSectionProps> = ({ title, cards }) => {
   return (
     <section className={styles.section}>
       <Spacer left='lg' right='lg' top='md' bottom='md'>
-        <Text varient='sectionTitle'>What our clients say</Text>
+        <Text varient='sectionTitle'>{title}</Text>
         <Spacer top='lg' />
         <div className={styles.card__container}>
-          <ReviewCard />
-          <ReviewCard />
-          <ReviewCard />
-          <ReviewCard />
+          {cards.map((card) => (
+            <ReviewCard key={card.title} {...card} />
+          ))}
         </div>
       </Spacer>
     </section>
