@@ -2,17 +2,9 @@ import Image from 'next/image';
 import Spacer from '../../atoms/Spcaer/Spacer.component';
 import Text from '../../atoms/Text/Text.component';
 import styles from './ServiceCard.module.scss';
+import { ICardProps } from '../../../utils/types';
 
 import pawImage from '../../../public/assets/icons/paw.svg';
-
-type rate = 'day' | 'week' | 'night';
-export interface ICardProps {
-  title: string;
-  body: string;
-  list: string[];
-  price: number;
-  rate: rate;
-}
 
 const ServiceCard: React.FC<ICardProps> = ({
   title,
