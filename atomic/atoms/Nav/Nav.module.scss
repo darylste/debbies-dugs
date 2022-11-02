@@ -13,9 +13,7 @@
       list-style-type: none;
       cursor: pointer;
 
-      &:not(:last-of-type) {
-        padding-right: $spacing-md;
-      }
+      margin-left: $spacing-md;
 
       &:hover {
         color: $color-primary;

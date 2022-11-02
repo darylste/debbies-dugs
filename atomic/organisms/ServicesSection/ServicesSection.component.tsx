@@ -7,7 +7,7 @@ import styles from './ServicesSection.module.scss';
 
 const ServicesSection: React.FC<IServicesSectionProps> = ({ title, cards }) => {
   return (
-    <section className={styles.section}>
+    <section id='services' className={styles.section}>
       <Text varient='sectionTitle'>{title}</Text>
       <Spacer bottom='lg' />
       <div className={styles.card__container}>

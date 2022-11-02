@@ -1,0 +1,23 @@
+@import '../../../styles/variables.scss';
+
+.footerListContainer {
+  text-align: center;
+}
+
+.footerList {
+  list-style: none;
+}
+
+.footerListItem {
+  font-size: $font-size-xs;
+  margin-top: $spacing-xs;
+  cursor: pointer;
+
+  &:hover {
+    color: $color-primary;
+  }
+
+  &:active {
+    filter: brightness(0.8);
+  }
+}
