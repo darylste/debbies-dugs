@@ -6,11 +6,15 @@ import { IReviewCardProps } from '../../../utils/types';
 import styles from './ReviewSection.module.scss';
 
 interface IReviewSectionProps {
-  title: string;
-  cards: IReviewCardProps[];
+  content: {
+    title: string;
+    cards: IReviewCardProps[];
+  };
 }
 
-const ReviewSection: React.FC<IReviewSectionProps> = ({ title, cards }) => {
+const ReviewSection: React.FC<IReviewSectionProps> = ({
+  content: { title, cards },
+}) => {
   return (
     <section className={styles.section}>
       <Spacer left='lg' right='lg' top='md' bottom='md'>

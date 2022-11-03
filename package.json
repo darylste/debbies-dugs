@@ -1,31 +1,33 @@
 {
-	"name": "debbies-dugs",
-	"version": "0.1.0",
-	"private": true,
-	"scripts": {
-		"dev": "next dev",
-		"build": "next build",
-		"start": "next start",
-		"lint": "next lint",
-		"lint-fix": "lint--fix",
-		"prepare": "husky install"
-	},
-	"dependencies": {
-		"classnames": "^2.3.2",
-		"next": "13.0.0",
-		"next-sanity": "^1.0.2",
-		"react": "18.2.0",
-		"react-dom": "18.2.0",
-		"react-masonry-css": "^1.0.16"
-	},
-	"devDependencies": {
-		"@types/node": "18.11.7",
-		"@types/react": "18.0.24",
-		"@types/react-dom": "18.0.8",
-		"eslint": "8.26.0",
-		"eslint-config-next": "13.0.0",
-		"husky": "^8.0.0",
-		"sass": "^1.55.0",
-		"typescript": "4.8.4"
-	}
+  "name": "debbies-dugs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "lint-fix": "lint--fix",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@sanity/client": "^3.4.1",
+    "@sanity/image-url": "^1.0.1",
+    "classnames": "^2.3.2",
+    "next": "13.0.0",
+    "next-sanity": "^1.0.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-masonry-css": "^1.0.16"
+  },
+  "devDependencies": {
+    "@types/node": "18.11.7",
+    "@types/react": "18.0.24",
+    "@types/react-dom": "18.0.8",
+    "eslint": "8.26.0",
+    "eslint-config-next": "13.0.0",
+    "husky": "^8.0.0",
+    "sass": "^1.55.0",
+    "typescript": "4.8.4"
+  }
 }

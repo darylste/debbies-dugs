@@ -3,7 +3,9 @@ import Masonry, { MasonryProps } from 'react-masonry-css';
 
 import Text from '../../atoms/Text/Text.component';
 import Spacer from '../../atoms/Spcaer/Spacer.component';
-import { GalleryImg } from '../../../utils/types';
+
+import { urlFor } from '../../../lib/client';
+import { sanityImg } from '../../../utils/types';
 
 import styles from './GallerySection.module.scss';
 
@@ -16,28 +18,31 @@ const breakpointColumnsObj: MasonryProps['breakpointCols'] = {
 
 interface IGallerySectionProps {
   breakpointCols?: MasonryProps['breakpointCols'];
-  imgArr: GalleryImg[];
+  content: {
+    title: string;
+    images: sanityImg[];
+  };
 }
 
 const GallerySection: React.FC<IGallerySectionProps> = ({
   breakpointCols = breakpointColumnsObj,
-  imgArr,
+  content: { title, images },
 }) => {
   return (
     <section id='gallery' className={styles.section}>
       <Spacer left='lg' right='lg' top='md' bottom='lg'>
-        <Text varient='sectionTitle'>Gallery</Text>
+        <Text varient='sectionTitle'>{title}</Text>
         <Spacer top='lg' />
         <Masonry
           breakpointCols={breakpointCols}
           className={styles.container}
           columnClassName={styles.column}
         >
-          {imgArr.map((item) => (
+          {images.map((img) => (
             <Image
-              key={item.alt}
-              src={`${item.src}`}
-              alt={item.alt}
+              key={img.alt}
+              src={urlFor(img.asset).url()}
+              alt={img.alt}
               width={10000}
               height={10000}
               style={{ width: '100%', height: 'auto' }}

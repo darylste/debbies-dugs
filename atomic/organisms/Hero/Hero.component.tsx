@@ -2,34 +2,27 @@ import Image from 'next/image';
 
 import Button from '../../atoms/Button/Button.component';
 import Text from '../../atoms/Text/Text.component';
-import heroImage from 'public/assets/illustrations/hero-image.svg';
 import Spacer from '../../atoms/Spcaer/Spacer.component';
+
+import { IHeroProps } from '../../../utils/types';
+import { urlFor } from '../../../lib/client';
+
 import styles from './Hero.module.scss';
 
-interface IHeroProps {
-  title: string;
-  text: string;
-  ctaBtnText: string;
-  ctaBtnLink: string;
-  outlineBtnText: string;
-  outlineBtnLink: string;
-  imgUrl: string;
-  imgAlt: string;
-  imgWidth: number;
-  imgHeight: number;
+interface IHeroSectionProps {
+  content: IHeroProps;
 }
 
-const Hero: React.FC<IHeroProps> = ({
-  title,
-  text,
-  ctaBtnText,
-  ctaBtnLink,
-  outlineBtnText,
-  outlineBtnLink,
-  imgUrl,
-  imgAlt,
-  imgWidth,
-  imgHeight,
+const Hero: React.FC<IHeroSectionProps> = ({
+  content: {
+    title,
+    text,
+    ctaBtnText,
+    ctaBtnLink,
+    outlineBtnText,
+    outlineBtnLink,
+    img,
+  },
 }) => {
   return (
     <>
@@ -52,10 +45,11 @@ const Hero: React.FC<IHeroProps> = ({
         </div>
         <div className={styles.hero__right}>
           <Image
-            src={imgUrl}
-            alt={imgAlt}
-            width={imgWidth}
-            height={imgHeight}
+            src={urlFor(img.asset).url()}
+            alt={img.alt}
+            width={img.width}
+            height={img.height}
+            priority
           ></Image>
         </div>
       </div>
