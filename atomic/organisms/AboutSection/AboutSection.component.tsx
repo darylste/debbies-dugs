@@ -3,40 +3,35 @@ import Image from 'next/image';
 import Button from '../../atoms/Button/Button.component';
 import Spacer from '../../atoms/Spcaer/Spacer.component';
 import Text from '../../atoms/Text/Text.component';
+
+import { IAboutProps } from '../../../utils/types';
+import { urlFor } from '../../../lib/client';
+
 import styles from './AboutSection.module.scss';
 
-import debbieImg from '../../../public/assets/debbie.png';
-
 interface IAboutSectionProps {
-  title: string;
-  intro: string;
-  text: string[];
-  btnText: string;
-  btnUrl: string;
-  imgUrl: string;
-  imgAlt: string;
+  content: IAboutProps;
 }
 
 const AboutSection: React.FC<IAboutSectionProps> = ({
-  title,
-  intro,
-  text,
-  btnText,
-  btnUrl,
-  imgUrl,
-  imgAlt,
+  content: { title, text, btnText, btnUrl, img },
 }) => {
   return (
     <section id='about' className={styles.section}>
       <Spacer left='lg' right='lg' top='lg' bottom='lg'>
-        <Text varient='sectionTitle'>{title}</Text>
+        <Text varient='sectionTitle'>About us</Text>
         <Spacer top='lg' />
         <div className={styles.about__container}>
           <div className={styles.left}>
-            <Image src={debbieImg} alt={imgAlt} width={450} height={437} />
+            <Image
+              src={urlFor(img.asset).url()}
+              alt={img.alt}
+              width={img.width}
+              height={img.height}
+            />
           </div>
           <div className={styles.rigjt}>
-            <Text varient='sectionTitle'>{intro}</Text>
+            <Text varient='sectionTitle'>{title}</Text>
             <Spacer top='md' bottom='lg'>
               {text.map((paragraph) => (
                 <Text varient='body' key={paragraph}>
