@@ -45,11 +45,21 @@ const Nav: React.FC = () => {
         </div>
 
         <ul className={styles.nav__mobile__list}>
-          <li className={styles.nav__mobile__list__item}>Home</li>
-          <li className={styles.nav__mobile__list__item}>Services</li>
-          <li className={styles.nav__mobile__list__item}>About</li>
-          <li className={styles.nav__mobile__list__item}>Gallery</li>
-          <li className={styles.nav__mobile__list__item}>Contact</li>
+          <Link href={'/'} onClick={() => setIsNavOpen(false)}>
+            <li className={styles.nav__mobile__list__item}>Home</li>
+          </Link>
+          <Link href={'/#services'} onClick={() => setIsNavOpen(false)}>
+            <li className={styles.nav__mobile__list__item}>Services</li>
+          </Link>
+          <Link href={'/#about'} onClick={() => setIsNavOpen(false)}>
+            <li className={styles.nav__mobile__list__item}>About</li>
+          </Link>
+          <Link href={'/#gallery'} onClick={() => setIsNavOpen(false)}>
+            <li className={styles.nav__mobile__list__item}>Gallery</li>
+          </Link>
+          <Link href={'/contact'} onClick={() => setIsNavOpen(false)}>
+            <li className={styles.nav__mobile__list__item}>Contact</li>
+          </Link>
         </ul>
       </div>
     );
