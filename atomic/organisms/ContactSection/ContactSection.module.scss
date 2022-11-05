@@ -1,0 +1,65 @@
+@import '../../../styles/variables.scss';
+
+.section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: $spacing-lg;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: $spacing-md;
+}
+
+.images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $spacing-md;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: $border-radius-md;
+}
+
+.socials {
+  display: flex;
+  justify-content: space-between;
+}
+
+.socialContainer {
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    color: $color-primary;
+    text-decoration: underline;
+  }
+
+  &:active {
+    filter: brightness(0.8);
+  }
+}
+
+.socialIcon {
+  width: 2.5rem;
+  margin-right: 1rem;
+}
+
+@media only screen and (max-width: 1150px) {
+  .section {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .contactInfo {
+    margin-right: 0;
+  }
+}
+
+@media only screen and (max-width: 475px) {
+  .images {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

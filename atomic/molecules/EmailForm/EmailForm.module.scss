@@ -1,0 +1,39 @@
+@import '../../../styles/variables.scss';
+
+.form {
+  display: flex;
+  flex-direction: column;
+  background-color: $color-white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  margin-left: $spacing-xl;
+  padding: $spacing-lg $spacing-md;
+  border-radius: $border-radius-md;
+
+  &Group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: $spacing-xs;
+  }
+}
+
+.label {
+  margin-bottom: $spacing-xs;
+}
+
+.input {
+  padding: 8px 5px;
+  border-radius: $border-radius-md;
+  border-color: rgba($color-secondary, 0.2);
+  border-width: 1.5px;
+}
+
+.error {
+  color: red;
+  font-size: $font-size-xs;
+}
+
+@media only screen and (max-width: 1150px) {
+  .form {
+    margin: $spacing-lg 0;
+  }
+}
