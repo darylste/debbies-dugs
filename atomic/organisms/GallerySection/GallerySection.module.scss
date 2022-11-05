@@ -1,7 +1,7 @@
 @import '../../../styles/variables.scss';
 
 .section {
-  margin: 0 $spacing-lg;
+  margin: 0 $spacing-sm;
 }
 
 .container {
@@ -13,12 +13,11 @@
   background-clip: padding-box;
 
   &:not(:first-child) {
-    margin-left: $spacing-md;
+    margin-left: $spacing-xs;
   }
 }
 
 .column > img {
-  /* change div to reference your elements you put in <Masonry> */
   background: grey;
   margin-bottom: $spacing-xs;
   border-radius: $border-radius-md;
@@ -34,5 +33,9 @@
 @media only screen and (max-width: 800px) {
   .section {
     margin: 0 $spacing-sm;
+  }
+
+  .column > img {
+    margin-bottom: $spacing-md;
   }
 }
