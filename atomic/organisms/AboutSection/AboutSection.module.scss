@@ -48,11 +48,19 @@
   }
 }
 
-@media only screen and (max-width: 4500px) {
+@media only screen and (max-width: 450px) {
   .about {
     &__img {
       width: 80%;
       margin-bottom: $spacing-md;
     }
+  }
+}
+
+@media only screen and (max-width: 410px) {
+  .btn {
+    display: block;
+    width: 100%;
+    text-align: center;
   }
 }

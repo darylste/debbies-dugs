@@ -6,6 +6,7 @@ interface IButtonProps {
   href?: string;
   disabled?: boolean;
   type?: 'submit';
+  className?: string;
 }
 
 const Button: React.FC<IButtonProps> = ({
@@ -14,16 +15,21 @@ const Button: React.FC<IButtonProps> = ({
   href = '/',
   disabled,
   type,
+  className,
 }) => {
   if (varient === 'form') {
     return (
-      <button disabled={disabled} type={type} className={`${styles[varient]}`}>
+      <button
+        disabled={disabled}
+        type={type}
+        className={`${styles[varient]} ${className}`}
+      >
         {text}
       </button>
     );
   }
   return (
-    <a className={`${styles.btn} ${styles[varient]}`} href={href}>
+    <a className={`${styles.btn} ${styles[varient]} ${className}`} href={href}>
       {text}
     </a>
   );
