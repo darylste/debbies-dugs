@@ -17,7 +17,7 @@ const ReviewSection: React.FC<IReviewSectionProps> = ({
 }) => {
   return (
     <section className={styles.section}>
-      <Spacer left='lg' right='lg' top='md' bottom='md'>
+      <Spacer top='md' bottom='md'>
         <Text varient='sectionTitle'>{title}</Text>
         <Spacer top='lg' />
         <div className={styles.card__container}>
