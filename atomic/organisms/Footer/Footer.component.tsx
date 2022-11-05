@@ -47,14 +47,15 @@ const Footer: React.FC = () => {
       <div className={styles.footerListContainer}>
         <Text varient='footerTitle'>Legal</Text>
         <ul className={styles.footerList}>
-          <Link href={'termsofuse'}>
+          <Link
+            href={
+              'https://www.termsofusegenerator.net/live.php?token=xHc4iL0TdqQrABAywitVQsEtBZzTAVM3'
+            }
+          >
             <li className={styles.footerListItem}>Terms of Use</li>
           </Link>
           <Link href={'/privicypolicy'}>
             <li className={styles.footerListItem}>Privicy Policy</li>
-          </Link>
-          <Link href={'/termsandcondidtion'}>
-            <li className={styles.footerListItem}>Terms and Conditions</li>
           </Link>
         </ul>
       </div>
