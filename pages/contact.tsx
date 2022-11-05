@@ -1,13 +1,13 @@
 import { Fragment } from 'react';
 import Nav from '../atomic/atoms/Nav/Nav.component';
-import { EmailForm } from '../atomic/molecules/EmailForm/EmailForm.component';
+import ContactSection from '../atomic/organisms/ContactSection/ContactSection.component';
 import Footer from '../atomic/organisms/Footer/Footer.component';
 
 const Contact = () => {
   return (
     <Fragment>
       <Nav />
-      <EmailForm />
+      <ContactSection />
       <Footer />
     </Fragment>
   );
