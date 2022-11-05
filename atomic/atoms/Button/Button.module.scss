@@ -14,11 +14,24 @@
 
 .cta {
   background-color: $color-primary;
+  &:hover {
+    filter: brightness(0.9);
+  }
+  &:active {
+    filter: brightness(0.8);
+  }
 }
 
 .outline {
   box-sizing: border-box;
   background-color: unset;
+
+  &:hover {
+    filter: brightness(0.8);
+  }
+  &:active {
+    filter: brightness(0.8);
+  }
 }
 
 .form {

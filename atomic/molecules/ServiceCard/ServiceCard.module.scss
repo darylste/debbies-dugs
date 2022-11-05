@@ -17,8 +17,7 @@
   }
 
   &__list {
-    list-style: none;
-
+    margin-left: $spacing-sm;
     &__item {
       &::before {
         content: '';
