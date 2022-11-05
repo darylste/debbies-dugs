@@ -40,7 +40,12 @@ const AboutSection: React.FC<IAboutSectionProps> = ({
                 </Text>
               ))}
             </Spacer>
-            <Button varient='cta' text={btnText} href={btnUrl} />
+            <Button
+              className={styles.btn}
+              varient='cta'
+              text={btnText}
+              href={btnUrl}
+            />
           </div>
         </div>
       </Spacer>

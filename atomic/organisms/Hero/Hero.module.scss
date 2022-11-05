@@ -53,6 +53,10 @@
 
 @media only screen and (max-width: 410px) {
   .btnGroup {
+    & > * {
+      width: 100%;
+      text-align: center;
+    }
     & > :not(:last-of-type) {
       margin-right: 0;
       margin-bottom: $spacing-md;
