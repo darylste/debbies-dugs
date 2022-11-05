@@ -1,6 +1,7 @@
 @import '../../../styles/variables.scss';
 
 .about {
+  margin: 0 $spacing-lg;
   &__container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -28,7 +29,6 @@
 
     &__img {
       width: 40%;
-      margin-bottom: $spacing-md;
     }
   }
 
@@ -39,11 +39,16 @@
   }
 }
 
+@media only screen and (max-width: 800px) {
+  .about {
+    margin: 0 $spacing-sm;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .about {
     &__img {
       width: 60%;
-      margin-bottom: $spacing-md;
     }
   }
 }
@@ -52,7 +57,6 @@
   .about {
     &__img {
       width: 80%;
-      margin-bottom: $spacing-md;
     }
   }
 }

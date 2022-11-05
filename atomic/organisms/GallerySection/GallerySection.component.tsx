@@ -30,7 +30,7 @@ const GallerySection: React.FC<IGallerySectionProps> = ({
 }) => {
   return (
     <section id='gallery' className={styles.section}>
-      <Spacer left='lg' right='lg' top='md' bottom='lg'>
+      <Spacer top='md' bottom='lg'>
         <Text varient='sectionTitle'>{title}</Text>
         <Spacer top='lg' />
         <Masonry

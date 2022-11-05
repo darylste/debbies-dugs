@@ -17,20 +17,21 @@ const AboutSection: React.FC<IAboutSectionProps> = ({
   content: { title, text, btnText, btnUrl, img },
 }) => {
   return (
-    <section id='about' className={styles.section}>
-      <Spacer left='lg' right='lg' top='lg' bottom='lg'>
-        <Text varient='sectionTitle'>About us</Text>
-        <Spacer top='lg' />
+    <section id='about' className={styles.about}>
+      <Spacer top='lg' bottom='lg'>
         <div className={styles.about__container}>
-          <div className={styles.left}>
-            <Image
-              className={styles.about__img}
-              src={urlFor(img.asset).url()}
-              alt={img.alt}
-              width={img.width}
-              height={img.height}
-            />
-          </div>
+          <Text varient='sectionTitle'>About us</Text>
+          <Spacer top='lg' bottom='lg'>
+            <div className={styles.left}>
+              <Image
+                className={styles.about__img}
+                src={urlFor(img.asset).url()}
+                alt={img.alt}
+                width={img.width}
+                height={img.height}
+              />
+            </div>
+          </Spacer>
           <div className={styles.rigjt}>
             <Text varient='sectionTitle'>{title}</Text>
             <Spacer top='md' bottom='lg'>

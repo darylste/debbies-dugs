@@ -93,6 +93,12 @@
   cursor: pointer;
 }
 
+@media only screen and (max-width: 800px) {
+  .nav {
+    margin: $spacing-md $spacing-sm;
+  }
+}
+
 @media only screen and (max-width: 650px) {
   .nav {
     &__list {
