@@ -17,7 +17,7 @@ export default function App({ Component, pageProps }: AppProps) {
           --font-body: ${nunitoSans.style.fontFamily};
         }
       `}</style>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </>
   );
 }

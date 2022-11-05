@@ -1,8 +1,9 @@
 @import '../../../styles/variables.scss';
 
 .footer {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: $spacing-md;
   padding: $spacing-sm $spacing-lg;
   background-color: $color-secondary;
   color: $color-white;
@@ -27,5 +28,17 @@
 
   &:active {
     filter: brightness(0.8);
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .footer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .footer {
+    grid-template-columns: repeat(1, 1fr);
   }
 }

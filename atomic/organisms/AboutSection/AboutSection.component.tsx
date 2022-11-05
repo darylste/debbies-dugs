@@ -24,6 +24,7 @@ const AboutSection: React.FC<IAboutSectionProps> = ({
         <div className={styles.about__container}>
           <div className={styles.left}>
             <Image
+              className={styles.about__img}
               src={urlFor(img.asset).url()}
               alt={img.alt}
               width={img.width}

@@ -10,4 +10,52 @@
     display: flex;
     justify-content: flex-end;
   }
+
+  &__img {
+    width: 100%;
+  }
+}
+
+.btnGroup {
+  display: flex;
+  flex-wrap: wrap;
+
+  & > :not(:last-of-type) {
+    margin-right: $spacing-md;
+  }
+}
+
+@media only screen and (max-width: 975px) {
+  .hero {
+    grid-template-columns: repeat(1, 1fr);
+
+    &__right {
+      margin-top: $spacing-xl;
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .btnGroup {
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .hero {
+    grid-template-columns: repeat(1, 1fr);
+
+    &__right {
+      margin-top: $spacing-lg;
+    }
+  }
+}
+
+@media only screen and (max-width: 410px) {
+  .btnGroup {
+    & > :not(:last-of-type) {
+      margin-right: 0;
+      margin-bottom: $spacing-md;
+    }
+  }
 }
