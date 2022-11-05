@@ -10,9 +10,9 @@ export interface IHeroProps {
   title: string;
   text: string;
   ctaBtnText: string;
-  ctaBtnLink: string;
+  ctaBtnUrl: string;
   outlineBtnText: string;
-  outlineBtnLink: string;
+  outlineBtnUrl: string;
   img: sanityImg;
 }
 

@@ -18,9 +18,9 @@ const Hero: React.FC<IHeroSectionProps> = ({
     title,
     text,
     ctaBtnText,
-    ctaBtnLink,
+    ctaBtnUrl,
     outlineBtnText,
-    outlineBtnLink,
+    outlineBtnUrl,
     img,
   },
 }) => {
@@ -33,13 +33,12 @@ const Hero: React.FC<IHeroSectionProps> = ({
             <Text varient='body'>{text}</Text>
           </Spacer>
           <div className={styles.btnGroup}>
-            <Spacer right='md'>
-              <Button varient='cta' text={ctaBtnText} href={ctaBtnLink} />
-            </Spacer>
+            <Button varient='cta' text={ctaBtnText} href={ctaBtnUrl} />
+            <Spacer right='md'></Spacer>
             <Button
               varient='outline'
               text={outlineBtnText}
-              href={outlineBtnLink}
+              href={outlineBtnUrl}
             />
           </div>
         </div>

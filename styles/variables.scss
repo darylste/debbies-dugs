@@ -1,6 +1,6 @@
 // font family
-$font-heading: 'cabin';
-$font-body: 'Nunito Sans';
+$font-heading: var(--font-heading);
+$font-body: var(--font-body);
 
 // font size
 $font-size-xl: 6.6rem;
