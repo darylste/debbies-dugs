@@ -1,15 +1,15 @@
 import Image from 'next/image';
 
 import Text from '../../atoms/Text/Text.component';
-import starIcon from '../../../public/assets/icons/star-full.svg';
-import starOutlineIcon from '../../../public/assets/icons/star-empty.svg';
 import quoteIcon from '../../../public/assets/icons/quote.svg';
 import Spacer from '../../atoms/Spcaer/Spacer.component';
 import { IReviewCardProps } from '../../../utils/types';
 
 import styles from './ReviewCard.module.scss';
+import { displayRating } from './utils';
 
 const ReviewCard: React.FC<IReviewCardProps> = ({ title, text, rating }) => {
+  displayRating;
   return (
     <div className={styles.card}>
       <Text varient='servicesTitle'>{title}</Text>
@@ -17,8 +17,13 @@ const ReviewCard: React.FC<IReviewCardProps> = ({ title, text, rating }) => {
         <Image src={quoteIcon} alt='quote' />
       </Spacer>
       <Text varient='body'>{text}</Text>
+      <div className={styles.grow}></div>
       <Spacer top='sm'>
-        <p>{rating}</p>
+        {displayRating(rating).map((img, i) => (
+          <Spacer right='xs' key={i}>
+            {img}
+          </Spacer>
+        ))}
       </Spacer>
     </div>
   );
