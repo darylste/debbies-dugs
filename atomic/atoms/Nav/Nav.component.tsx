@@ -12,12 +12,14 @@ const Nav: React.FC = () => {
     return (
       <div className={styles.nav__mobile}>
         <div className={styles.nav__mobile__top}>
-          <Image
-            className={styles.logo}
-            src={logo}
-            alt='Debbies Dugs Logo'
-            width={85}
-          />
+          <Link href={'/'}>
+            <Image
+              className={styles.logo}
+              src={logo}
+              alt='Debbies Dugs Logo'
+              width={85}
+            />
+          </Link>
           <svg
             onClick={() => setIsNavOpen(false)}
             className={styles.nav__mobile__exit}
@@ -67,12 +69,14 @@ const Nav: React.FC = () => {
   return (
     <React.Fragment>
       <nav className={styles.nav}>
-        <Image
-          className={styles.logo}
-          src={logo}
-          alt='Debbies Dugs Logo'
-          width={85}
-        />
+        <Link href={'/'}>
+          <Image
+            className={styles.logo}
+            src={logo}
+            alt='Debbies Dugs Logo'
+            width={85}
+          />
+        </Link>
         <ul className={styles.nav__list}>
           <Link href={'/'}>
             <li className={styles.nav__list__item}>Home</li>
