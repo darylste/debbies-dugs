@@ -16,10 +16,10 @@ const ServiceCard: React.FC<ICardProps> = ({
   return (
     <div className={styles.card}>
       <Text varient='servicesTitle'>{title}</Text>
-      <Spacer top='xs' bottom='xs'>
+      <Spacer top='sm' bottom='sm'>
         <Text varient='body'>{body}</Text>
       </Spacer>
-      <Spacer bottom='xs'>
+      <Spacer bottom='sm'>
         <ul className={styles.card__list}>
           {list.map((item) => (
             <li key={item}>{item}</li>

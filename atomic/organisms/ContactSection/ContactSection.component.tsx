@@ -35,7 +35,6 @@ const ContactSection: React.FC<IContactSectionProps> = ({
             />
           ))}
         </div>
-        <Spacer bottom='xl' />
         <div className={styles.socials}>
           <Link target='_blank' href={'https://www.facebook.com/Debbiesdugs'}>
             <div className={styles.socialContainer}>
@@ -105,6 +104,18 @@ const ContactSection: React.FC<IContactSectionProps> = ({
         </div>
       </div>
       <EmailForm />
+      <div className={styles.images__mobile}>
+        {images.map((image, i) => (
+          <Image
+            key={i}
+            className={styles.image}
+            src={urlFor(image.asset).url()}
+            alt={image.alt}
+            width={100}
+            height={100}
+          />
+        ))}
+      </div>
     </div>
   );
 };

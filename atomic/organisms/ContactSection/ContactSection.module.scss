@@ -17,12 +17,18 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: $spacing-md;
+  margin-bottom: $spacing-xl;
 }
 
 .image {
   width: 100%;
   height: auto;
   border-radius: $border-radius-md;
+
+  &__mobile {
+    display: none;
+    visibility: hidden;
+  }
 }
 
 .socials {
@@ -55,6 +61,23 @@
   }
   .contactInfo {
     margin-right: 0;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .section {
+    margin: $spacing-md $spacing-sm;
+  }
+
+  .images {
+    display: none;
+    visibility: hidden;
+
+    &__mobile {
+      display: unset;
+      visibility: unset;
+      margin-bottom: $spacing-md;
+    }
   }
 }
 
