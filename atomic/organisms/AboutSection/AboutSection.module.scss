@@ -1,4 +1,49 @@
-.about__container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+@import '../../../styles/variables.scss';
+
+.about {
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 975px) {
+  .about {
+    &__container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &__img {
+      width: 40%;
+      margin-bottom: $spacing-md;
+    }
+  }
+
+  .left {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .about {
+    &__img {
+      width: 60%;
+      margin-bottom: $spacing-md;
+    }
+  }
+}
+
+@media only screen and (max-width: 4500px) {
+  .about {
+    &__img {
+      width: 80%;
+      margin-bottom: $spacing-md;
+    }
+  }
 }

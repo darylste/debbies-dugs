@@ -34,7 +34,6 @@ const Hero: React.FC<IHeroSectionProps> = ({
           </Spacer>
           <div className={styles.btnGroup}>
             <Button varient='cta' text={ctaBtnText} href={ctaBtnUrl} />
-            <Spacer right='md'></Spacer>
             <Button
               varient='outline'
               text={outlineBtnText}
@@ -44,6 +43,7 @@ const Hero: React.FC<IHeroSectionProps> = ({
         </div>
         <div className={styles.hero__right}>
           <Image
+            className={styles.hero__img}
             src={urlFor(img.asset).url()}
             alt={img.alt}
             width={img.width}
