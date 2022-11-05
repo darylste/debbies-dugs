@@ -5,38 +5,35 @@ import { EmailForm } from '../../molecules/EmailForm/EmailForm.component';
 
 import styles from './ContactSection.module.scss';
 import Link from 'next/link';
+import { IContactProps, sanityImg } from '../../../utils/types';
+import { urlFor } from '../../../lib/client';
 
-const ContactSection = () => {
+interface IContactSectionProps {
+  content: IContactProps;
+}
+
+const ContactSection: React.FC<IContactSectionProps> = ({
+  content: { title, text, images },
+}) => {
+  // console.log(content);
   return (
     <div className={styles.section}>
       <div className={styles.contactInfo}>
-        <Text varient='sectionTitle'>Get in Touch</Text>
+        <Text varient='sectionTitle'>{title}</Text>
         <Spacer top='sm' bottom='sm'>
-          <Text varient='body'>
-            We would love to hear from you and your pupper! Please fill out our
-            form, reach out via social media or give us a call and we&apos;ll
-            tail-or a package to your furry friends needs.
-          </Text>
+          <Text varient='body'>{text}</Text>
         </Spacer>
         <div className={styles.images}>
-          <Image
-            className={styles.image}
-            src={
-              'https://images.unsplash.com/photo-1554079501-1e3155dc26da?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2887&q=80/photos/tHH61GubElY'
-            }
-            alt='dog'
-            width={100}
-            height={100}
-          />
-          <Image
-            className={styles.image}
-            src={
-              'https://images.unsplash.com/photo-1554079501-1e3155dc26da?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2887&q=80/photos/tHH61GubElY'
-            }
-            alt='dog'
-            width={100}
-            height={100}
-          />
+          {images.map((image, i) => (
+            <Image
+              key={i}
+              className={styles.image}
+              src={urlFor(image.asset).url()}
+              alt={image.alt}
+              width={100}
+              height={100}
+            />
+          ))}
         </div>
         <Spacer bottom='xl' />
         <div className={styles.socials}>

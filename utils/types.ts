@@ -48,3 +48,9 @@ export interface IFooterListProps {
   title: string;
   list: string[];
 }
+
+export interface IContactProps {
+  title: string;
+  text: string;
+  images: sanityImg[];
+}
