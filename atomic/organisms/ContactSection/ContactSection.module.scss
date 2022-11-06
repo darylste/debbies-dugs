@@ -26,6 +26,9 @@
   border-radius: $border-radius-md;
 
   &__mobile {
+    width: 100%;
+    height: auto;
+    border-radius: $border-radius-md;
     display: none;
     visibility: hidden;
   }
@@ -33,7 +36,7 @@
 
 .socials {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .socialContainer {
@@ -53,6 +56,14 @@
 .socialIcon {
   width: 2.5rem;
   margin-right: 1rem;
+
+  &:hover {
+    scale: 0.9;
+  }
+
+  &:active {
+    scale: 1;
+  }
 }
 
 @media only screen and (max-width: 1150px) {
@@ -72,11 +83,15 @@
   .images {
     display: none;
     visibility: hidden;
-
+  }
+  .image {
     &__mobile {
-      display: unset;
-      visibility: unset;
-      margin-bottom: $spacing-md;
+      display: block;
+      visibility: visible;
+
+      &:not(:last-of-type) {
+        margin-bottom: $spacing-md;
+      }
     }
   }
 }

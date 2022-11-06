@@ -36,6 +36,9 @@
   }
 
   .column > img {
-    margin-bottom: $spacing-md;
+    margin-bottom: 0;
+    &:not(:last-of-type) {
+      margin-bottom: $spacing-md;
+    }
   }
 }

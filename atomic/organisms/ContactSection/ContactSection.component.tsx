@@ -108,7 +108,7 @@ const ContactSection: React.FC<IContactSectionProps> = ({
         {images.map((image, i) => (
           <Image
             key={i}
-            className={styles.image}
+            className={styles.image__mobile}
             src={urlFor(image.asset).url()}
             alt={image.alt}
             width={100}
