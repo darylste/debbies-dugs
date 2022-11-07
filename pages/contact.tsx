@@ -3,7 +3,7 @@ import Nav from '../atomic/atoms/Nav/Nav.component';
 import ContactSection from '../atomic/organisms/ContactSection/ContactSection.component';
 import Footer from '../atomic/organisms/Footer/Footer.component';
 import { client } from '../lib/client';
-import { IContactProps, sanityImg } from '../utils/types';
+import { IContactProps } from '../utils/types';
 
 interface IContactContentProps {
   contactProps: IContactProps;
