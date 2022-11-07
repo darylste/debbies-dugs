@@ -5,7 +5,6 @@ export const initialValues = {
   firstName: '',
   lastName: '',
   contactNumber: '',
-  subject: '',
   message: '',
 };
 
@@ -34,10 +33,6 @@ export const validateForm = (values: IFormValues) => {
     errors.contactNumber = 'Please enter your contact number';
   } else if (!values.contactNumber.match(ukMobileNumberRegEx)) {
     errors.contactNumber = 'Please enter a valid phone number';
-  }
-
-  if (!values.subject) {
-    errors.subject = 'Please enter a subject line';
   }
 
   return errors;

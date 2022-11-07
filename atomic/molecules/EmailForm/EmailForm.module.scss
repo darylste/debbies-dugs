@@ -27,6 +27,10 @@
   border-width: 1.5px;
 }
 
+.grow {
+  flex: 1;
+}
+
 .error {
   color: red;
   font-size: $font-size-xs;

@@ -1,4 +1,5 @@
 import SGMail from '@sendgrid/mail';
+import { emailTemplate } from '../../email';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 type Data = {
@@ -13,18 +14,23 @@ export default async function handler(
     if (
       !req.body.firstName ||
       !req.body.lastName ||
-      !req.body.subject ||
-      !req.body.message
+      !req.body.message ||
+      !req.body.contactNumber
     ) {
       return res.status(400).json({ message: 'Please complete the form' });
     }
 
     const msg = {
-      to: 'kevinmcgrady47@gmail.com',
-      from: 'kevinmcgrady47@gmail.com',
-      subject: req.body.subject,
-      text: req.body.subject,
-      html: `<strong>${req.body.firstName} ${req.body.lastName} ${req.body.contactNumber} ${req.body.message}</strong>`,
+      to: 'dstensland5@gmail.com',
+      from: 'dstensland5@gmail.com',
+      subject: 'Send via debbies-dugs.co-uk',
+      text: 'Send via debbies-dugs.co-uk',
+      html: emailTemplate(
+        req.body.firstName,
+        req.body.lastName,
+        req.body.message,
+        req.body.contactNumber
+      ),
     };
 
     try {
