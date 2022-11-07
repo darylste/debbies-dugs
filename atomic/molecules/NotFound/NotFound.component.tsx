@@ -13,8 +13,8 @@ const NotFound: React.FC = () => {
         <Image
           className={styles.img}
           src='/assets/illustrations/fetch.svg'
-          width={400}
-          height={400}
+          width={250}
+          height={250}
           alt='dog'
         />
       </Spacer>
@@ -22,7 +22,7 @@ const NotFound: React.FC = () => {
         The page you&apos;re looking for doesn&apos;t exist. Click bellow to
         return home.
       </Text>
-      <Spacer bottom='md' />
+      <Spacer bottom='lg' />
       <Button href='/' text='Home' varient='cta' />
     </div>
   );

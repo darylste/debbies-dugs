@@ -8,6 +8,7 @@ import { initialValues, submitForm, validateForm } from './utils';
 
 import styles from './EmailForm.module.scss';
 import Spacer from '../../atoms/Spcaer/Spacer.component';
+import { useRouter } from 'next/router';
 
 export interface IFormValues {
   firstName?: string;
@@ -18,6 +19,7 @@ export interface IFormValues {
 
 export const EmailForm = () => {
   const [hasError, setHasError] = useState(false);
+  const router = useRouter();
 
   return (
     <Formik
@@ -30,6 +32,7 @@ export const EmailForm = () => {
           // eslint-disable-next-line quotes
           toast.success('Message submitted!');
           resetForm();
+          router.push('/submitted');
         } catch (error) {
           setHasError(true);
         } finally {
@@ -106,14 +109,14 @@ export const EmailForm = () => {
             <label className={styles.label} htmlFor='lastName'>
               Message
             </label>
-            <input
-              className={styles.input}
+            <textarea
+              className={`${styles.input} ${styles.textarea}`}
               id='message'
               name='message'
-              type='text'
               onChange={handleChange}
               onBlur={handleBlur}
               value={values.message}
+              rows={7}
             />
             {errors.message && touched.message && (
               <p className={styles.error}>{errors.message}</p>
