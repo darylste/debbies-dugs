@@ -8,6 +8,7 @@ import { IAboutProps } from '../../../utils/types';
 import { urlFor } from '../../../lib/client';
 
 import styles from './AboutSection.module.scss';
+import { Fragment } from 'react';
 
 interface IAboutSectionProps {
   content: IAboutProps;
@@ -33,10 +34,11 @@ const AboutSection: React.FC<IAboutSectionProps> = ({
           <div className={styles.rigjt}>
             <Text varient='sectionTitle'>{title}</Text>
             <Spacer top='md' bottom='lg'>
-              {text.map((paragraph) => (
-                <Text varient='body' key={paragraph}>
-                  {paragraph}
-                </Text>
+              {text.map((paragraph, i) => (
+                <Fragment key={i}>
+                  <Text varient='body'>{paragraph}</Text>
+                  <Spacer bottom='xs' />
+                </Fragment>
               ))}
             </Spacer>
             <Button

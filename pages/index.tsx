@@ -15,6 +15,7 @@ import {
   IReviewSectionProps,
   sanityImg,
 } from '../utils/types';
+import Head from 'next/head';
 
 interface IHomeProps {
   heroProps: IHeroProps;
@@ -33,6 +34,13 @@ const Home: React.FC<IHomeProps> = ({
 }) => {
   return (
     <div>
+      <Head>
+        <title>Debbie&apos;s Dugs - Home Page</title>
+        <meta
+          name='description'
+          content="Debbie's Dugs offers a range of dog walking, boarding and day care services in Glasgow's East End."
+        />
+      </Head>
       <Nav />
       <Hero content={heroProps} />
       <ServicesSection cards={servicesProps} />
