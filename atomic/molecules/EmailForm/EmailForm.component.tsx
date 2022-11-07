@@ -1,6 +1,7 @@
 import { Formik } from 'formik';
 import { useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
+import cn from 'classnames';
 
 import Button from '../../atoms/Button/Button.component';
 import { initialValues, submitForm, validateForm } from './utils';
@@ -12,7 +13,6 @@ export interface IFormValues {
   firstName?: string;
   lastName?: string;
   contactNumber?: string;
-  subject?: string;
   message?: string;
 }
 
@@ -22,13 +22,14 @@ export const EmailForm = () => {
   return (
     <Formik
       initialValues={initialValues}
-      onSubmit={async (values, { setSubmitting }) => {
+      onSubmit={async (values, { setSubmitting, resetForm }) => {
         setHasError(false);
         setSubmitting(true);
         try {
           await submitForm(values);
           // eslint-disable-next-line quotes
           toast.success('Message submitted!');
+          resetForm();
         } catch (error) {
           setHasError(true);
         } finally {
@@ -101,24 +102,7 @@ export const EmailForm = () => {
               <p className={styles.error}>{errors.contactNumber}</p>
             )}
           </div>
-          <div className={styles.formGroup}>
-            <label className={styles.label} htmlFor='lastName'>
-              Subject
-            </label>
-            <input
-              className={styles.input}
-              id='subject'
-              name='subject'
-              type='text'
-              onChange={handleChange}
-              onBlur={handleBlur}
-              value={values.subject}
-            />
-            {errors.subject && touched.subject && (
-              <p className={styles.error}>{errors.subject}</p>
-            )}
-          </div>
-          <div className={styles.formGroup}>
+          <div className={cn(styles.formGroup, styles.grow)}>
             <label className={styles.label} htmlFor='lastName'>
               Message
             </label>
