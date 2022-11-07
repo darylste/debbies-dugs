@@ -89,7 +89,7 @@ export const EmailForm = () => {
             )}
           </div>
           <div className={styles.formGroup}>
-            <label className={styles.label} htmlFor='lastName'>
+            <label className={styles.label} htmlFor='contactNumber'>
               Contact number
             </label>
             <input
@@ -106,7 +106,7 @@ export const EmailForm = () => {
             )}
           </div>
           <div className={cn(styles.formGroup, styles.grow)}>
-            <label className={styles.label} htmlFor='lastName'>
+            <label className={styles.label} htmlFor='message'>
               Message
             </label>
             <textarea
