@@ -27,6 +27,11 @@
   border-width: 1.5px;
 }
 
+.textarea {
+  font-family: inherit;
+  font-size: $font-size-xs;
+}
+
 .grow {
   flex: 1;
 }
