@@ -9,14 +9,6 @@ import styles from './Nav.module.scss';
 const Nav: React.FC = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
-  // const scrollHandle = (e) => {
-  //   e.preventDefault();
-  //   let id = e.target.id;
-  //   let position = document.getElementById(id.slice(0, id.length - 1)); //removing extra last - (dash)
-  //   window.location.href = '#' + id.slice(0, id.length - 1); // changing the url
-  //   position && position.scrollIntoView({ behavior: 'smooth', block: 'start' }); //scrolling the page
-  // };
-
   if (isNavOpen) {
     return (
       <div className={styles.nav__mobile}>
