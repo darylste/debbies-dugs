@@ -8,7 +8,8 @@ type Varient =
   | 'sectionTitle'
   | 'btnText'
   | 'footerTitle'
-  | 'socialText';
+  | 'socialText'
+  | 'reviewAuthor';
 
 interface ITextProps {
   children: React.ReactNode;
@@ -32,6 +33,8 @@ const Text: React.FC<ITextProps> = ({ children, varient }) => {
       return <h4 className={styles.footerTitle}>{children}</h4>;
     case 'socialText':
       return <p className={styles.socialText}>{children}</p>;
+    case 'reviewAuthor':
+      return <p className={styles.reviewAuthor}>{children}</p>;
   }
 };
 

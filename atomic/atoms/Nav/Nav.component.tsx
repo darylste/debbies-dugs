@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
@@ -47,21 +48,31 @@ const Nav: React.FC = () => {
         </div>
 
         <ul className={styles.nav__mobile__list}>
-          <Link href={'/'} onClick={() => setIsNavOpen(false)}>
-            <li className={styles.nav__mobile__list__item}>Home</li>
-          </Link>
-          <Link href={'/#services'} onClick={() => setIsNavOpen(false)}>
-            <li className={styles.nav__mobile__list__item}>Services</li>
-          </Link>
-          <Link href={'/#about'} onClick={() => setIsNavOpen(false)}>
-            <li className={styles.nav__mobile__list__item}>About</li>
-          </Link>
-          <Link href={'/#gallery'} onClick={() => setIsNavOpen(false)}>
-            <li className={styles.nav__mobile__list__item}>Gallery</li>
-          </Link>
-          <Link href={'/contact'} onClick={() => setIsNavOpen(false)}>
-            <li className={styles.nav__mobile__list__item}>Contact</li>
-          </Link>
+          <li className={styles.nav__mobile__list__item}>
+            <Link href={'/'} onClick={() => setIsNavOpen(false)}>
+              Home
+            </Link>
+          </li>
+          <li className={styles.nav__mobile__list__item}>
+            <Link href={'/#services'} onClick={() => setIsNavOpen(false)}>
+              Services
+            </Link>
+          </li>
+          <li className={styles.nav__mobile__list__item}>
+            <Link href={'/#about'} onClick={() => setIsNavOpen(false)}>
+              About
+            </Link>
+          </li>
+          <li className={styles.nav__mobile__list__item}>
+            <Link href={'/#gallery'} onClick={() => setIsNavOpen(false)}>
+              Gallery
+            </Link>
+          </li>
+          <li className={styles.nav__mobile__list__item}>
+            <Link href={'/contact'} onClick={() => setIsNavOpen(false)}>
+              Contact
+            </Link>
+          </li>
         </ul>
       </div>
     );
@@ -78,21 +89,21 @@ const Nav: React.FC = () => {
           />
         </Link>
         <ul className={styles.nav__list}>
-          <Link href={'/'}>
-            <li className={styles.nav__list__item}>Home</li>
-          </Link>
-          <Link href={'/#services'}>
-            <li className={styles.nav__list__item}>Services</li>
-          </Link>
-          <Link href={'/#about'}>
-            <li className={styles.nav__list__item}>About</li>
-          </Link>
-          <Link href={'/#gallery'}>
-            <li className={styles.nav__list__item}>Gallery</li>
-          </Link>
-          <Link href={'/contact'}>
-            <li className={styles.nav__list__item}>Contact</li>
-          </Link>
+          <li className={styles.nav__list__item}>
+            <Link href={'/'}>Home</Link>
+          </li>
+          <li className={styles.nav__list__item}>
+            <a href='/#services'>Services</a>
+          </li>
+          <li className={styles.nav__list__item}>
+            <a href='/#about'>About</a>
+          </li>
+          <li className={styles.nav__list__item}>
+            <a href='/#gallery'>Gallery</a>
+          </li>
+          <li className={styles.nav__list__item}>
+            <Link href={'/contact'}>Contact</Link>
+          </li>
         </ul>
         <div className={styles.nav__hamburger}>
           <svg

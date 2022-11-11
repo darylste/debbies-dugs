@@ -42,6 +42,8 @@ export interface IReviewCardProps {
   title: string;
   text: string;
   rating: number;
+  author: string;
+  url: string;
 }
 
 export interface IFooterListProps {

@@ -22,7 +22,6 @@ const Contact: React.FC<IContactContentProps> = ({ contactProps }) => {
 export const getServerSideProps = async () => {
   const contactProps = await client.fetch('*[_type == "contact"]');
 
-  console.log(contactProps[0]);
   return {
     props: {
       contactProps: contactProps[0],
