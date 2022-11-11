@@ -7,8 +7,15 @@ import { IReviewCardProps } from '../../../utils/types';
 
 import styles from './ReviewCard.module.scss';
 import { displayRating } from './utils';
+import Link from 'next/link';
 
-const ReviewCard: React.FC<IReviewCardProps> = ({ title, text, rating }) => {
+const ReviewCard: React.FC<IReviewCardProps> = ({
+  title,
+  text,
+  rating,
+  author,
+  url,
+}) => {
   displayRating;
   return (
     <div className={styles.card}>
@@ -18,7 +25,12 @@ const ReviewCard: React.FC<IReviewCardProps> = ({ title, text, rating }) => {
       </Spacer>
       <Text varient='body'>{text}</Text>
       <div className={styles.grow}></div>
-      <Spacer top='sm'>
+      <Spacer top='sm' bottom='xs'>
+        <Link href={url} target='_blank'>
+          <Text varient='reviewAuthor'>{author}</Text>
+        </Link>
+      </Spacer>
+      <Spacer>
         {displayRating(rating).map((img, i) => (
           <Spacer right='xs' key={i}>
             {img}

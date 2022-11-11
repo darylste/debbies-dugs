@@ -10,7 +10,7 @@
   gap: $spacing-md;
 }
 
-@media only screen and (max-width: 1700px) {
+@media only screen and (max-width: 1300px) {
   .card__container {
     grid-template-columns: repeat(3, 1fr);
   }

@@ -15,7 +15,6 @@ interface IContactSectionProps {
 const ContactSection: React.FC<IContactSectionProps> = ({
   content: { title, text, images },
 }) => {
-  // console.log(content);
   return (
     <div className={styles.section}>
       <div className={styles.contactInfo}>
