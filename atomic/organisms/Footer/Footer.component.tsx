@@ -54,7 +54,11 @@ const Footer: React.FC = () => {
           >
             <li className={styles.footerListItem}>Terms of Use</li>
           </Link>
-          <Link href={'/privicypolicy'}>
+          <Link
+            href={
+              'https://www.privacypolicygenerator.info/live.php?token=VlS8r58OSl21bD0V8m1JqbR5mYeUsHYa'
+            }
+          >
             <li className={styles.footerListItem}>Privicy Policy</li>
           </Link>
         </ul>
