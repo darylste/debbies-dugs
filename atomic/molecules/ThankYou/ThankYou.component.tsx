@@ -16,10 +16,12 @@ const ThankYou: React.FC = () => {
           alt='complete'
         />
       </Spacer>
-      <Text varient='body'>
-        Thanks for reaching out, we have recieved your message and will be in
-        touch soon.
-      </Text>
+      <Spacer left='md' right='md' top='md'>
+        <Text varient='body'>
+          Thanks for reaching out, we have recieved your message and will be in
+          touch soon.
+        </Text>
+      </Spacer>
       <Spacer bottom='lg' />
       <Button href='/' text='Home' varient='cta' />
     </div>

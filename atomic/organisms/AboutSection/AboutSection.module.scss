@@ -5,13 +5,14 @@
   &__container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin: $spacing-xl;
+    margin: $spacing-lg;
   }
 
   &__img {
     width: 100%;
     max-width: 40rem;
     height: auto;
+    margin-bottom: $spacing-lg;
   }
 }
 
@@ -26,6 +27,7 @@
   .about {
     &__container {
       grid-template-columns: repeat(1, 1fr);
+      margin: $spacing-lg $spacing-sm;
     }
 
     &__img {

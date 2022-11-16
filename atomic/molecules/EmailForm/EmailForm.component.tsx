@@ -53,7 +53,11 @@ export const EmailForm = () => {
       }) => (
         <form onSubmit={handleSubmit} className={styles.form}>
           <Toaster />
-          {hasError && <p>There was a problem submitting your message!</p>}
+          {hasError && (
+            <p className={styles.error}>
+              There was a problem submitting your message! Please try again.
+            </p>
+          )}
           <div className={styles.formGroup}>
             <label className={styles.label} htmlFor='firstName'>
               First name
