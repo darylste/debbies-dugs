@@ -18,10 +18,12 @@ const NotFound: React.FC = () => {
           alt='dog'
         />
       </Spacer>
-      <Text varient='body'>
-        The page you&apos;re looking for doesn&apos;t exist. Click bellow to
-        return home.
-      </Text>
+      <Spacer top='md' left='md' right='md'>
+        <Text varient='body'>
+          The page you&apos;re looking for doesn&apos;t exist. Click bellow to
+          return home.
+        </Text>
+      </Spacer>
       <Spacer bottom='lg' />
       <Button href='/' text='Home' varient='cta' />
     </div>

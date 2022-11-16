@@ -37,9 +37,9 @@ const Footer: React.FC = () => {
           <Link href={'tel:07999 083627'}>
             <li className={styles.footerListItem}>Call: 07999 083627</li>
           </Link>
-          <Link href={'mailto: contact@debbiesdugs.co.uk'}>
+          <Link href={'mailto: debbiesdugs@gmail.com'}>
             <li className={styles.footerListItem}>
-              Email: contact@debbiesdugs.co.uk
+              Email: debbiesdugs@gmail.com
             </li>
           </Link>
         </ul>

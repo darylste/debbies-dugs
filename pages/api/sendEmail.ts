@@ -21,8 +21,8 @@ export default async function handler(
     }
 
     const msg = {
-      to: 'dstensland5@gmail.com',
-      from: 'dstensland5@gmail.com',
+      to: 'debbiesdugs@gmail.com',
+      from: 'debbiesdugs@gmail.com',
       subject: 'Send via debbies-dugs.co-uk',
       text: 'Send via debbies-dugs.co-uk',
       html: emailTemplate(
