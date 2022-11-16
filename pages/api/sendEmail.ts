@@ -38,7 +38,7 @@ export default async function handler(
       await SGMail.send(msg);
       res.status(200).json({ message: 'Email sent' });
     } catch (error) {
-      res.status(400).json({ message: 'Failed to send email' });
+      res.status(400).json({ message: `Failed to send email: ${error}` });
     }
   } else {
     res.status(500).json({ message: 'Request must be a POST request' });
