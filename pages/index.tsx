@@ -40,6 +40,7 @@ const Home: React.FC<IHomeProps> = ({
           name='description'
           content="Debbie's Dugs offers a range of dog walking, boarding and day care services in Glasgow's East End."
         />
+        <link rel='shortcut icon' href='favicon.svg' type='image/x-icon' />
       </Head>
       <Nav />
       <Hero content={heroProps} />
