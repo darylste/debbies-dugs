@@ -20,13 +20,12 @@ const ServiceCard: React.FC<ICardProps> = ({
         <Text varient='body'>{body}</Text>
       </Spacer>
       <div className={styles.grow}>
-        <Spacer bottom='sm'>
-          <ul className={styles.card__list}>
-            {list.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-        </Spacer>
+        <ul className={styles.card__list}>
+          {list.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+        <Spacer top='xl' />
       </div>
       <p className={styles.card__price}>
         <Text varient='servicesPrice'>£{price}</Text> per {rate}
