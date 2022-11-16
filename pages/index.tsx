@@ -63,7 +63,7 @@ export const getServerSideProps = async () => {
   return {
     props: {
       heroProps: heroProps[0],
-      servicesProps,
+      servicesProps: servicesProps[0].services,
       aboutProps: aboutProps[0],
       // reviewProps: reviewProps[0],
       galleryProps: galleryProps[0],
