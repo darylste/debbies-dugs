@@ -38,9 +38,9 @@ const GallerySection: React.FC<IGallerySectionProps> = ({
           className={styles.container}
           columnClassName={styles.column}
         >
-          {images.map((img) => (
+          {images.map((img, i) => (
             <Image
-              key={img.alt}
+              key={i}
               src={urlFor(img.asset).url()}
               alt={img.alt}
               width={10000}
