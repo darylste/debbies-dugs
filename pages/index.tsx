@@ -46,7 +46,7 @@ const Home: React.FC<IHomeProps> = ({
       <Hero content={heroProps} />
       <ServicesSection cards={servicesProps} />
       <AboutSection content={aboutProps} />
-      <ReviewSection content={reviewProps} />
+      {/* <ReviewSection content={reviewProps} /> */}
       <GallerySection content={galleryProps} />
       <Footer />
     </div>
@@ -57,7 +57,7 @@ export const getServerSideProps = async () => {
   const heroProps = await client.fetch('*[_type == "hero"]');
   const servicesProps = await client.fetch('*[_type == "services"]');
   const aboutProps = await client.fetch('*[_type == "about"]');
-  const reviewProps = await client.fetch('*[_type == "reviews"]');
+  // const reviewProps = await client.fetch('*[_type == "reviews"]');
   const galleryProps = await client.fetch('*[_type == "gallery"]');
 
   return {
@@ -65,7 +65,7 @@ export const getServerSideProps = async () => {
       heroProps: heroProps[0],
       servicesProps,
       aboutProps: aboutProps[0],
-      reviewProps: reviewProps[0],
+      // reviewProps: reviewProps[0],
       galleryProps: galleryProps[0],
     },
   };
