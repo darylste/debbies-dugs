@@ -1,6 +1,8 @@
 @import '../../../styles/variables.scss';
 
 .card {
+  display: flex;
+  flex-direction: column;
   position: relative;
   overflow: hidden;
   background-color: $color-secondary;
@@ -31,4 +33,8 @@
       }
     }
   }
+}
+
+.grow {
+  flex: 1;
 }
