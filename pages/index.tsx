@@ -35,11 +35,25 @@ const Home: React.FC<IHomeProps> = ({
   return (
     <div>
       <Head>
-        <title>Debbie&apos;s Dugs - Home Page</title>
+        <title>Debbie&apos;s Dugs - Dog Walking, Boarding and Day Care</title>
+
+        <meta
+          name='title'
+          content="Debbie's Dugs - Dog Walking, Boarding and Day Care "
+        />
         <meta
           name='description'
-          content="Debbie's Dugs offers a range of dog walking, boarding and day care services in Glasgow's East End."
+          content='We offer a range of dog walking, boarding and daycare services in Glasgow and are fully insured and K9 first aid-trained.'
         />
+        <meta
+          name='keywords'
+          content='Dog Walking, Glasgow Dog Walker, Dog Boarding, Doggy Day Care, Dog Walker Glasgow, East End Glasgow Dog walker, Dog walker Glasgow east end'
+        />
+        <meta name='robots' content='index, follow' />
+        <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+        <meta name='language' content='English' />
+        <meta name='author' content='www.daryl-stensland.com/' />
+
         <link rel='shortcut icon' href='favicon.svg' type='image/x-icon' />
       </Head>
       <Nav />
