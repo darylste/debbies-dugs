@@ -5,6 +5,7 @@ export const initialValues = {
   firstName: '',
   lastName: '',
   contactNumber: '',
+  emailAddress: '',
   message: '',
 };
 
@@ -14,6 +15,8 @@ export const submitForm = async (values: IFormValues) => {
 
 export const validateForm = (values: IFormValues) => {
   const ukMobileNumberRegEx = /^(\+44\s?7\d{3}|\(?07\d{3}\)?)\s?\d{3}\s?\d{3}$/;
+  const emailAddressRegEx =
+    /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
 
   const errors: IFormValues = {};
 
@@ -33,6 +36,12 @@ export const validateForm = (values: IFormValues) => {
     errors.contactNumber = 'Please enter your contact number';
   } else if (!values.contactNumber.match(ukMobileNumberRegEx)) {
     errors.contactNumber = 'Please enter a valid phone number';
+  }
+
+  if (!values.emailAddress) {
+    errors.emailAddress = 'Please enter your email address';
+  } else if (!values.emailAddress.match(emailAddressRegEx)) {
+    errors.emailAddress = 'Please enter a valid email address';
   }
 
   return errors;

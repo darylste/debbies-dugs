@@ -1,4 +1,4 @@
-export const emailTemplate = (firstName, lastName, message, number) => {
+export const emailTemplate = (firstName, lastName, message, number, email) => {
   return `
  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html data-editor-version="2" class="sg-campaigns" xmlns="http://www.w3.org/1999/xhtml">
@@ -210,6 +210,10 @@ body {font-family: 'Chivo', sans-serif;}
       </tr>
       <tr>
         <td style="padding:0px 0px 18px 0px; line-height:22px; text-align:inherit;" height="100%" valign="top" bgcolor="" role="module-content"><div><div style="font-family: inherit; text-align: left"><strong>Contact Number:</strong> ${number}</div>
+<div></div></div></td>
+      </tr>
+      <tr>
+        <td style="padding:0px 0px 18px 0px; line-height:22px; text-align:inherit;" height="100%" valign="top" bgcolor="" role="module-content"><div><div style="font-family: inherit; text-align: left"><strong>Email Address:</strong> ${email}</div>
 <div></div></div></td>
       </tr>
     </tbody>

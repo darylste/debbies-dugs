@@ -15,7 +15,8 @@ export default async function handler(
       !req.body.firstName ||
       !req.body.lastName ||
       !req.body.message ||
-      !req.body.contactNumber
+      !req.body.contactNumber ||
+      !req.body.emailAddress
     ) {
       return res.status(400).json({ message: 'Please complete the form' });
     }
@@ -29,7 +30,8 @@ export default async function handler(
         req.body.firstName,
         req.body.lastName,
         req.body.message,
-        req.body.contactNumber
+        req.body.contactNumber,
+        req.body.emailAddress
       ),
     };
 

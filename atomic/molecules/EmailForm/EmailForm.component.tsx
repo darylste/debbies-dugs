@@ -14,6 +14,7 @@ export interface IFormValues {
   firstName?: string;
   lastName?: string;
   contactNumber?: string;
+  emailAddress?: string;
   message?: string;
 }
 
@@ -107,6 +108,23 @@ export const EmailForm = () => {
             />
             {errors.contactNumber && touched.contactNumber && (
               <p className={styles.error}>{errors.contactNumber}</p>
+            )}
+          </div>
+          <div className={styles.formGroup}>
+            <label className={styles.label} htmlFor='emailAddress'>
+              Email Address
+            </label>
+            <input
+              className={styles.input}
+              id='emailAddress'
+              name='emailAddress'
+              type='text'
+              onChange={handleChange}
+              onBlur={handleBlur}
+              value={values.emailAddress}
+            />
+            {errors.emailAddress && touched.emailAddress && (
+              <p className={styles.error}>{errors.emailAddress}</p>
             )}
           </div>
           <div className={cn(styles.formGroup, styles.grow)}>
