@@ -61,7 +61,7 @@ const Contact: React.FC<IContactContentProps> = ({ contactProps }) => {
       </Head>
       <Nav />
       <ContactSection content={contactProps} />
-      <Footer />
+      <Footer />    
     </Fragment>
   );
 };
