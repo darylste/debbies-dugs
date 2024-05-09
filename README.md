@@ -1,4 +1,4 @@
-# Debbies Dugs | Freelance Project
+# [Debbies Dugs](https://www.debbiesdugs.co.uk/) | Freelance Project
 
 A business website created for a local dog walker. Created using **Next.js** with **TypeScript**. 
 
